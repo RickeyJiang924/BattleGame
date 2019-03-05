@@ -5,18 +5,17 @@
 package com.battlegame.bean.impl.role;
 
 import com.battlegame.bean.Role;
-import com.battlegame.bean.impl.attack.AttackLX;
 import com.battlegame.bean.impl.weapon.Weapon_Lightsword;
 
 public class Role_JH extends Role{
 
 	public Role_JH(String name) {
 		super(name);
-		this.attack_power = 10;
-		this.defend_power = 10;
+		this.attack_power = 15;
+		this.defend_power = 5;
 		this.occupation = "½£»ê";
 		this.weapon = new Weapon_Lightsword();
-	    this.attackBehavior = new AttackLX();
+	    //this.attackBehavior = new AttackLX();
 	}
 	
 	public String introduction() {

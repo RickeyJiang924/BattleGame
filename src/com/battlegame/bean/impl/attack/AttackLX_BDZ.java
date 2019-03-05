@@ -17,10 +17,6 @@ public class AttackLX_BDZ implements IAttackBehavior{
 		return skill;
 	}
 
-	public AttackLX_BDZ() {
-		
-	}
-
 	@Override
 	public void attack() {
 		System.out.println("ÆÆ¿Õ°Îµ¶Õ¶£¡");

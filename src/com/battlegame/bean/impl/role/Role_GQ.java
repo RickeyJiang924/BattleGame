@@ -10,9 +10,9 @@ import com.battlegame.bean.impl.weapon.Weapon_Tachi;
 public class Role_GQ extends Role{
 	public Role_GQ(String name) {
 		super(name);
-		this.attack_power = 10;
-		this.defend_power = 10;
-		this.occupation = "½£»ê";
+		this.attack_power = 20;
+		this.defend_power = 0;
+		this.occupation = "¹íÆü";
 		this.weapon = new Weapon_Tachi();
 	    //this.attackBehavior = new AttackLX();
 	}

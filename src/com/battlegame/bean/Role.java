@@ -15,9 +15,11 @@ public abstract class Role {
 	protected double health_power;
 	protected double magic_power;
 	protected int experience;
+	protected int level;
 	protected String occupation;
 	protected Weapon weapon;
 	protected ArrayList<Skill> skill;
+	protected Monster monster;
     protected IAttackBehavior attackBehavior;
 
 	public Role(String name) {
@@ -25,6 +27,8 @@ public abstract class Role {
 		this.health_power = 100;
 		this.magic_power = 100;
 		this.experience = 0;
+		this.skill = new ArrayList<>();
+		this.skill.add(new Skill("流心", 10));
 	}
 
 	public String getName() {
@@ -75,6 +79,22 @@ public abstract class Role {
 		this.experience = experience;
 	}
 
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
+	public Monster getMonster() {
+		return monster;
+	}
+
+	public void setMonster(Monster monster) {
+		this.monster = monster;
+	}
+
 	public String getOccupation() {
 		return occupation;
 	}
@@ -83,8 +103,13 @@ public abstract class Role {
 		this.occupation = occupation;
 	}
 
-	public ArrayList<Skill> getSkill() {
-		return skill;
+	public Skill getSkill(String s) {
+		for(int i = 0 ; i < this.skill.size() ; i++) {
+			if(this.skill.get(i).getName().equals(s)) {
+				return this.skill.get(i);
+			}
+		}
+		return null;
 	}
 
 	public void setSkill(ArrayList<Skill> skill) {
@@ -114,5 +139,10 @@ public abstract class Role {
 	//计算总攻击力
 	public double calculate() {
 		return 0;
+	}
+	
+	//攻击
+	public void attack() {
+		attackBehavior.attack();
 	}
 }
