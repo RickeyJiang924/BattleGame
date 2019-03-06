@@ -10,8 +10,15 @@ public class Weapon_Blunt extends Weapon{
 	public Weapon_Blunt() {
 		super();
 		this.name = "¶ÛÆ÷";
-		this.attack_power = 10;
+		this.attack_power = 17;
 		this.grow_power = 3.5;
+	}
+	
+	public Weapon_Blunt(int level) {
+		this.level = level;
+		this.name = "¶ÛÆ÷";
+		this.grow_power = 3.5;
+		this.attack_power = 17+level*this.grow_power;
 	}
 	
 	@Override

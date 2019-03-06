@@ -34,7 +34,9 @@ public abstract class Weapon {
 		return level;
 	}
 
+	//爆野生装备，随机赋予等级
 	public void setLevel(int level) {
+		this.attack_power += (level-this.level)*grow_power;
 		this.level = level;
 	}
 
@@ -42,6 +44,7 @@ public abstract class Weapon {
 		return "武器介绍：\n";
 	}
 
+	//强化概率根据等级变化
 	public String strengthen() {
 		double d = Math.random();
 		if(level <= 4) {

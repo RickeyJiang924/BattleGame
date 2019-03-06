@@ -10,8 +10,15 @@ public class Weapon_Tachi extends Weapon{
 	public Weapon_Tachi() {
 		super();
 		this.name = "Ì«µ¶";
-		this.attack_power = 10;
+		this.attack_power = 9;
 		this.grow_power = 4.5;
+	}
+	
+	public Weapon_Tachi(int level) {
+		this.level = level;
+		this.name = "Ì«µ¶";
+		this.grow_power = 4.5;
+		this.attack_power = 9+level*this.grow_power;
 	}
 	
 	@Override

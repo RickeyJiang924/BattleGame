@@ -11,12 +11,13 @@ class test_bean {
 	void test() {
 		//String name, double attack_power, double defend_power, double health_power, double magic_power,
 		//int experience, String occupation, Weapon weapon, IAttackBehavior attackBehavior
-		Role r = new Role_GQ("fzz");
-		System.out.println(r.getName()+":"+r.getOccupation()+"，"+"已修得技能："+r.getSkill("流心").getName());
-		for(int i = 0 ; i <= 100 ; i++) {
-			System.out.print(r.getWeapon().strengthen()+"，武器等级：");
-			System.out.println(r.getWeapon().getLevel());
-		}
+		Role r = new Role_GQ("蒋学垲");
+		System.out.println(r.getName()+":"+r.getOccupation()+"，"+"获得武器："+r.getWeapon().getName());
+//		for(int i = 0 ; i <= 100 ; i++) {
+//			System.out.print(r.getWeapon().strengthen()+"，武器等级：");
+//			System.out.println(r.getWeapon().getLevel());
+//		}
+		
 	}
 	
 }

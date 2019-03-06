@@ -103,13 +103,8 @@ public abstract class Role {
 		this.occupation = occupation;
 	}
 
-	public Skill getSkill(String s) {
-		for(int i = 0 ; i < this.skill.size() ; i++) {
-			if(this.skill.get(i).getName().equals(s)) {
-				return this.skill.get(i);
-			}
-		}
-		return null;
+	public Skill getSkill(int k) {
+		return this.skill.get(k);
 	}
 
 	public void setSkill(ArrayList<Skill> skill) {
@@ -138,11 +133,12 @@ public abstract class Role {
 	
 	//¼ÆËã×Ü¹¥»÷Á¦
 	public double calculate() {
-		return 0;
+		return this.attack_power + this.weapon.attack_power + this.attackBehavior.getSkill().getSkill_attack_power();
 	}
 	
 	//¹¥»÷
-	public void attack() {
+	public double attack() {
 		attackBehavior.attack();
+		return this.calculate();
 	}
 }
