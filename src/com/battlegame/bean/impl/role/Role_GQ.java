@@ -13,6 +13,7 @@ public class Role_GQ extends Role{
 		this.attack_power = 20;
 		this.defend_power = 0;
 		this.occupation = "¹íÆü";
+		this.type = "ap";
 		this.weapon = new Weapon_Tachi();
 	    //this.attackBehavior = new AttackLX();
 	}

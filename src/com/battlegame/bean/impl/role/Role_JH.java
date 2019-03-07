@@ -14,6 +14,7 @@ public class Role_JH extends Role{
 		this.attack_power = 15;
 		this.defend_power = 5;
 		this.occupation = "½£»ê";
+		this.type = "ad";
 		this.weapon = new Weapon_Lightsword();
 	    //this.attackBehavior = new AttackLX();
 	}

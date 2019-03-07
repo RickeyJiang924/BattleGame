@@ -13,6 +13,7 @@ public class Role_KZS extends Role{
 		this.attack_power = 10;
 		this.defend_power = 10;
 		this.occupation = "¿ñÕ½Ê¿";
+		this.type = "ad";
 		this.weapon = new Weapon_Greatsword();
 	    //this.attackBehavior = new AttackLX();
 	}

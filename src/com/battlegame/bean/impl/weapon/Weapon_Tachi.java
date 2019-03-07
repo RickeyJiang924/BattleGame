@@ -10,7 +10,8 @@ public class Weapon_Tachi extends Weapon{
 	public Weapon_Tachi() {
 		super();
 		this.name = "Ì«µ¶";
-		this.attack_power = 9;
+		this.basic_attack_power = 9;
+		this.attack_power = this.basic_attack_power;
 		this.grow_power = 4.5;
 	}
 	
@@ -18,6 +19,7 @@ public class Weapon_Tachi extends Weapon{
 		this.level = level;
 		this.name = "Ì«µ¶";
 		this.grow_power = 4.5;
+		this.basic_attack_power = 9;
 		this.attack_power = 9+level*this.grow_power;
 	}
 	

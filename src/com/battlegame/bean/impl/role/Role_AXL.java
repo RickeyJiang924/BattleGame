@@ -13,6 +13,7 @@ public class Role_AXL extends Role{
 		this.attack_power = 5;
 		this.defend_power = 15;
 		this.occupation = "°¢ÐÞÂÞ";
+		this.type = "ap";
 		this.weapon = new Weapon_Blunt();
 	    //this.attackBehavior = new AttackLX();
 	}

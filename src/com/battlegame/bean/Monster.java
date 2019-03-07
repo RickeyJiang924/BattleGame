@@ -69,11 +69,16 @@ public abstract class Monster {
 	public void setWeapon(Weapon weapon) {
 		this.weapon = weapon;
 	}
+	
+	public String introduction() {
+		return "ÕâÊÇÒ»¸ö¹ÖÊŞ£¡";
+	}
 
 	//¹ÖÊŞÓĞ¸ÅÂÊµôÂäÎäÆ÷
 	public Weapon droppedWeapon() {
 		double d = Math.random();
-		if(d <= (1000-this.experience)/1000) {
+		if(d <= (double)(1000-this.experience)/1000) {
+			//System.out.println("µôÂäÎäÆ÷£¡");
 			return this.weapon;
 		}
 		return null;

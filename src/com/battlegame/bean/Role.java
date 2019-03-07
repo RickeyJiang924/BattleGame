@@ -17,6 +17,7 @@ public abstract class Role {
 	protected int experience;
 	protected int level;
 	protected String occupation;
+	protected String type;   //物理ad或魔法ap
 	protected Weapon weapon;
 	protected ArrayList<Skill> skill;
 	protected Monster monster;
@@ -85,6 +86,14 @@ public abstract class Role {
 
 	public void setLevel(int level) {
 		this.level = level;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public Monster getMonster() {
